@@ -13,6 +13,8 @@ import java.util.Set;
  *
  * @author Home
  */
+
+// as validações devem ser feitas no Controller (se a palavra pode ser inserida ou se ela já existe, etc)
 public class Controller {
     
    //Cria dicionario

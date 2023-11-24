@@ -13,7 +13,12 @@ import java.util.Set;
  *
  * @author Home
  */
-public class P2_POO {
+
+ // comentário geral para todas as classes modelo: ele pode querer que os nomes das variáveis do programa sigam o modelo definido
+ // no diagrama UML. Então na classe Palavra, por exemplo, a lista de sinônimos não poderia se chamar "listaSinonimos", mas 
+ // sim "sinonimos". Eu acho isso ruim, porque eu achei os nomes que ele escolheu para as classes meio confusos, mas pode ser que 
+ // ele cobre isso.
+ public class P2_POO {
 
     public static void main(String[] args) {
         System.out.println("Bem vindo ao dicionário mais limitado do universo.\n");
@@ -22,6 +27,11 @@ public class P2_POO {
         System.out.println("                                                    -Edward Hopper");
         
         Set<String> significados = new HashSet<>();
+        // aqui eu também tenho dúvida: eu não sei se ele aceita que as classes visão criem estruturas. Por exemplo, eu não sei se
+        // ele quer que cada significado seja inserido um de cada vez por uma função do tipo 
+        // adicionaPalavra(Dicionario dicionario, String fonetica, String grafia, String significado) ou se ele aceitaria criar um 
+        // conjunto na view e então inserir a palavra junto com todos os seus significados, ou se ele aceitaria qualquer uma das duas
+
         Dicionario MeuDicionario = Controller.IniciaDicionario();
         
         String fonetica = "lí-vro";

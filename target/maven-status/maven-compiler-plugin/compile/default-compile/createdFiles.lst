@@ -1,7 +1,7 @@
-com\mycompany\p2_poo\Controller\Controller.class
-com\mycompany\p2_poo\Visual\P2_POO.class
-com\mycompany\p2_poo\Modelo\Palavra.class
-com\mycompany\p2_poo\Modelo\Verbo.class
-com\mycompany\p2_poo\Modelo\Dicionario.class
-com\mycompany\p2_poo\Modelo\Substantivo.class
-com\mycompany\p2_poo\Modelo\Sinonimo.class
+com\mycompany\p2_poo\questao1\modelo\Sinonimo.class
+com\mycompany\p2_poo\questao1\modelo\Substantivo.class
+com\mycompany\p2_poo\questao1\modelo\Palavra.class
+com\mycompany\p2_poo\questao1\visual\P2_POO.class
+com\mycompany\p2_poo\questao1\modelo\Dicionario.class
+com\mycompany\p2_poo\questao1\controller\Controller.class
+com\mycompany\p2_poo\questao1\modelo\Verbo.class

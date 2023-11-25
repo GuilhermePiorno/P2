@@ -2,17 +2,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.p2_poo.Modelo;
+package com.mycompany.p2_poo.questao1.modelo;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
  * @author Home
  */
 public class Sinonimo {
-    private Set<Palavra> palavrasSinonimas = new HashSet<>();
+    private List<Palavra> palavras = new ArrayList<>();
     private String significado;
     
     Sinonimo(){
@@ -27,7 +27,7 @@ public class Sinonimo {
     }
         
     public void adicionaPalavra(Palavra p){
-        palavrasSinonimas.add(p);
+        palavras.add(p);
     }
     
     public String getSignificado(){
@@ -35,7 +35,7 @@ public class Sinonimo {
     }
     
     //Apenas para testar funcionamento.(ignorar)
-    public Set<Palavra> getPalavras(){
-        return palavrasSinonimas;
+    public List<Palavra> getPalavras(){
+        return palavras;
     }
 }

@@ -2,17 +2,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.p2_poo.Modelo;
+package com.mycompany.p2_poo.questao1.modelo;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
  * @author Home
  */
 public class Palavra {
-    private Set<Sinonimo> listaSinonimos= new HashSet<>(); //Relação muitos p/ muitos do diagrama.
+    private List<Sinonimo> listaSinonimos = new ArrayList<>(); //Relação muitos p/ muitos do diagrama.
     private String fonetica;    //exigencia do diagrama.
     private String grafia;      //exigencia do diagrama.
     
@@ -21,7 +21,7 @@ public class Palavra {
     }
     
     // Diagram exige construtor com fonetica/grafia.
-    public Palavra(String fonetica, String grafia){
+    public Palavra(String grafia, String fonetica){
         this.fonetica = fonetica;
         this.grafia = grafia;
     }
@@ -33,12 +33,13 @@ public class Palavra {
     }
     
     // Auxiliar
-    public Set<Sinonimo> getSinonimos(){
+    public List<Sinonimo> getSinonimos(){
         return listaSinonimos;
     }
     
     // Auxiliar
-    public void getPalavra(){
+    public void consultaPalavra(){
+        System.out.println("---------------------------------");
         System.out.println("Fonética: "+this.fonetica);
         System.out.println("Grafia: "+this.grafia);
         System.out.println("Significados: ");

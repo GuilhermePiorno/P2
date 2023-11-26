@@ -5,6 +5,8 @@
 package com.mycompany.p2_poo.questao1.controller;
 
 import com.mycompany.p2_poo.questao1.modelo.Dicionario;
+import com.mycompany.p2_poo.questao1.modelo.Palavra;
+import com.mycompany.p2_poo.questao1.modelo.Sinonimo;
 import java.util.List;
 
 
@@ -24,12 +26,26 @@ public class Controller {
    }
    
    public static void consultaPalavra(Dicionario dic, String consulta){
-       dic.consultaPalavra(consulta);
+        Palavra p = dic.buscaPalavra(consulta);
+        if (p != null){
+            System.out.println("---------------------------------");
+            System.out.println("Fonética: "+p.getFonetica());
+            System.out.println("Grafia: "+p.getGrafia());
+            System.out.println("Significados: ");
+            List<Sinonimo> sinonimos = p.getSinonimos();
+            for (Sinonimo s: sinonimos){
+                System.out.println("-"+s.getSignificado()+"\n");
+            }
+            return;
+            
+        }
+        System.out.println("\""+consulta+"\" não se encontra do dicionário.");
+        
    }
    
-   public static void listaTodasPalavras(Dicionario dic){
-       dic.listaTodasPalavras();
-   }
+//   public static void listaTodasPalavras(Dicionario dic){
+//       dic.listaTodasPalavras();
+//   }
    
    //Apenas para testar funcionamento.(ignorar)
    public static void listaPorSignificado(Dicionario dic){

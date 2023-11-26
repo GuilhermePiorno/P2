@@ -19,14 +19,6 @@ public class Dicionario {
     // na hora de adicionar, as palavras tem que ser inseridas em ordem alfabética
     public void adiciona(String fonetica, String grafia, List<String> significados){
         Palavra p = new Palavra(grafia, fonetica);
-        // e se a palavra já estiver no dicionário? Ele vai reclamar que foi criado um novo objeto desnecessário. Eu pensei em 
-        // 4 casos:
-        //          1 - palavra já existe no dicionário e já existe uma palavra no dicionário com o mesmo significado passado
-        //          2 - palavra já existe no dicionário, mas não existe uma palavra no dicionário com o mesmo significado
-        //          3 - palavra não existe no dicionário, mas existe uma palavra no dicionário com o mesmo significado passado
-        //          4 - nem palavra nem significado existem no dicionário
-        // cada um desses casos vai precisar de uma lógica diferente, e uma nova palavra deveria ser criada apenas quando ela não
-        // estiver presente no dicionário.
         
         // Busca sinonimo de cada significado e caso não exista cria um. Depois relaciona palavra com sinonimo.
         for (String sig : significados){
@@ -73,22 +65,22 @@ public class Dicionario {
     // Lista todas as palavras do dicionario com fonética, grafia e sinônimos.
     // Em vez de ter que mudar de Set para Array, pode ser que baste as palavras serem listadas em ordem alfabética, mas guardadas
     // em qualquer ordem no Set
-    public void listaTodasPalavras(){
-        for (Palavra p: this.palavras){
-            p.consultaPalavra();
-        }
-    }
+//    public void listaTodasPalavras(){
+//        for (Palavra p: this.palavras){
+//            p.consultaPalavra();
+//        }
+//    }
     
    
-    // Lista grafia, fonetica e significado de uma palavra específica.
-    public void consultaPalavra(String consulta){
-        Palavra aux = buscaPalavra(consulta);
-        if (aux != null){
-            aux.consultaPalavra();
-            return;
-        }
-        System.out.println("\""+consulta+"\" não se encontra do dicionário.");
-    }
+//    // Lista grafia, fonetica e significado de uma palavra específica.
+//    public void consultaPalavra(String consulta){
+//        Palavra aux = buscaPalavra(consulta);
+//        if (aux != null){
+//            aux.consultaPalavra();
+//            return;
+//        }
+//        System.out.println("\""+consulta+"\" não se encontra do dicionário.");
+//    }
     
     //Apenas para testar funcionamento.(ignorar)
     public void listaPorSignificado(){
